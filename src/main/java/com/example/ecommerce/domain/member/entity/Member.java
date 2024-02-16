@@ -15,4 +15,9 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @ToString
 public class Member extends BaseEntity {
+    String membername;
+    String password;
+    String role;
+    String nickname;
+    String email;
 }
