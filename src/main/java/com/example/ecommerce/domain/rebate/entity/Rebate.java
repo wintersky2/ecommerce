@@ -16,6 +16,5 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @ToString
 public class Rebate extends BaseEntity {
-    Member member;
-    Long money;
+    private Long money;
 }

@@ -17,10 +17,9 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @ToString
 public class Product extends BaseEntity {
-    Member seller;
-    String name;
-    Integer price;
-    String information;
-    Integer stock;
-    Integer salesRate;
+    private String name;
+    private Integer price;
+    private String information;
+    private Integer stock;
+    private Integer salesRate;
 }

@@ -1,4 +1,3 @@
-
 spring:
   profiles:
     active: dev  # 기본적으로는 application-dev.yml 이 로딩된다는 의미

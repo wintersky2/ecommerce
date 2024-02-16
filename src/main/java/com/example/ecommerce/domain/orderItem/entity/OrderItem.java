@@ -17,10 +17,8 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @ToString
 public class OrderItem extends BaseEntity {
-    Member buyer;
-    Product product;
-    Integer number;
-    Integer price;
-    String paymentType;
-    String statement;
+    private Integer number;
+    private Integer price;
+    private String paymentType;
+    private String statement;
 }

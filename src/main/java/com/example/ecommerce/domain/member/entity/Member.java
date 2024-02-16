@@ -17,17 +17,13 @@ import lombok.experimental.SuperBuilder;
 @ToString
 public class Member extends BaseEntity {
     @Column(unique = true)
-    String membername;
-
+    private String membername;
     @Column
-    String password;
-
+    private String password;
     @Column
-    String role;
-
-    @Column
-    String nickname;
-
-    @Column
-    String email;
+    private String role;
+    @Column(unique = true)
+    private String nickname;
+    @Column(unique = true)
+    private String email;
 }

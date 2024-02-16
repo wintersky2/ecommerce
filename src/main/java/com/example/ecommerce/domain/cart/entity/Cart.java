@@ -17,7 +17,6 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @ToString
 public class Cart extends BaseEntity {
-    Member member;
-    Product product;
-    Integer number;
+
+    private Integer number;
 }
