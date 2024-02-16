@@ -1,5 +1,6 @@
 package com.example.ecommerce.domain.rebate.entity;
 
+import com.example.ecommerce.domain.member.entity.Member;
 import com.example.ecommerce.global.jpa.BaseEntity;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
@@ -15,4 +16,6 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @ToString
 public class Rebate extends BaseEntity {
+    Member member;
+    Long money;
 }

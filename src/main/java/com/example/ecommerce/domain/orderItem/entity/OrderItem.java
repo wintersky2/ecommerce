@@ -1,5 +1,7 @@
-package com.example.ecommerce.domain.productReview.entity;
+package com.example.ecommerce.domain.orderItem.entity;
 
+import com.example.ecommerce.domain.member.entity.Member;
+import com.example.ecommerce.domain.product.entity.Product;
 import com.example.ecommerce.global.jpa.BaseEntity;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
@@ -14,5 +16,11 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class ProductReview extends BaseEntity {
+public class OrderItem extends BaseEntity {
+    Member buyer;
+    Product product;
+    Integer number;
+    Integer price;
+    String paymentType;
+    String statement;
 }

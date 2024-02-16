@@ -1,5 +1,7 @@
 package com.example.ecommerce.domain.cart.entity;
 
+import com.example.ecommerce.domain.member.entity.Member;
+import com.example.ecommerce.domain.product.entity.Product;
 import com.example.ecommerce.global.jpa.BaseEntity;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
@@ -15,4 +17,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @ToString
 public class Cart extends BaseEntity {
+    Member member;
+    Product product;
+    Integer number;
 }
