@@ -1,5 +1,6 @@
 package com.example.ecommerce.domain.product.entity;
 
+import com.example.ecommerce.domain.member.entity.Member;
 import com.example.ecommerce.global.jpa.BaseEntity;
 import com.fasterxml.jackson.databind.ser.Serializers;
 import jakarta.persistence.Entity;
@@ -16,4 +17,10 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @ToString
 public class Product extends BaseEntity {
+    Member seller;
+    String name;
+    Integer price;
+    String information;
+    Integer stock;
+    Integer salesRate;
 }
