@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class MemberService {
@@ -20,5 +22,13 @@ public class MemberService {
                 .email(email)
                 .build();
         this.memberRepository.save(member);
+    }
+
+    public Member findBymembername(String membername) {
+        Optional<Member> _member = this.memberRepository.findByMembername(membername);
+        if(_member.isEmpty()){
+            return null;
+        }
+        return _member.get();
     }
 }
