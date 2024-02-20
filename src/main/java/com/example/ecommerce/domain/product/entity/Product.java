@@ -4,6 +4,7 @@ import com.example.ecommerce.domain.member.entity.Member;
 import com.example.ecommerce.global.jpa.BaseEntity;
 import com.fasterxml.jackson.databind.ser.Serializers;
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,9 +18,9 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @ToString
 public class Product extends BaseEntity {
+    @ManyToOne
+    private Member seller;
     private String name;
-    private Integer price;
+    private Long price;
     private String information;
-    private Integer stock;
-    private Integer salesRate;
 }
